@@ -13,7 +13,7 @@ class CheckAccess < Sinatra::Base
     if params['username'] == 'mainuser' &&
       ( request.path_info =~ /vh|rs/ ||
       ( params.key?('password') && params['password'] == 'valid_password' )) then
-      answer = "allow#{' administrator' if request.path_info =~ /in/}\n"
+      answer = "allow#{' administrator' if request.path_info =~ /in/}"
       # answer = "allow administrator monitoring management policymaker\n"
       # answer = 'deny'
       puts "\t\tmy answer is '#{answer}'"
