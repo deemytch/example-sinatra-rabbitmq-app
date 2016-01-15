@@ -8,7 +8,7 @@ class CheckAccess < Sinatra::Base
   end
   
   before do
-    puts "\t\tsinatra: ip:#{request.ip}, #{params['username']}:#{params['password']}"
+    puts "\tip:#{request.ip}, #{params['username']}:#{params['password']};\n\tline: #{request.url}"
     halt(404) unless request.ip == '127.0.0.1'
     if params['username'] == 'mainuser' &&
       ( request.path_info =~ /vh|rs/ ||
@@ -16,7 +16,7 @@ class CheckAccess < Sinatra::Base
       answer = "allow#{' administrator' if request.path_info =~ /in/}\n"
       # answer = "allow administrator monitoring management policymaker\n"
       # answer = 'deny'
-      puts "\t\tsinatra #{answer}"
+      puts "\t\tmy answer is '#{answer}'"
       halt 200, answer
     end
   end
