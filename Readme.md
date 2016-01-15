@@ -1,6 +1,8 @@
 Sample app for testing with rabbitmq http_auth_backend.
-For 'mainuser' with password 'valid_password' it responds with 'allow administrator'.
-For others it responds 'allow'.
+For *'mainuser'* with password *'valid_password'* it responds with *'allow administrator'*.
+For others it responds *'allow'*.
+RabbitMQ configuration is prepared for double use: you can add users both
+to mnesia rabbitmq database and to that app.
 
 Steps to start
 ==============
