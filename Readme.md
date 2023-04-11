@@ -7,7 +7,7 @@ to mnesia rabbitmq database and to that app.
 Steps to start
 ==============
 
-1. install ruby (I use ruby 2.3.0p0)
+1. install ruby (I use ruby 3.0.5)
 2. download sources
 3. run `bundle install --path=vendor`
 4. to start app run `bundle exec ruby check_access.rb`
